@@ -9,8 +9,6 @@ public:
     student (int g = 0, int s = 0)
     : grade(g), score(s)
     {
-//        grade = g;
-//        score = s;
     }
     int getGrade() {
         return grade;
@@ -151,7 +149,6 @@ int main(){
 //
 //    cout << "Hello world! " << characterName << endl;
 //    cout << characterName.find('o') << endl;
-//
 //
 //    string name;
 //    getline(cin, name);
