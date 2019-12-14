@@ -4,7 +4,7 @@
 #include <vector>
 #include "calculators.h"
 
-<<<<<<< HEAD
+
 //class student{
 //public:
 //    student (int g = 0, int s = 0)
@@ -26,7 +26,7 @@
 //    int grade, score;
 //
 //};
-=======
+
 class student{
 public:
     student (int g = 0, int s = 0)
@@ -50,7 +50,6 @@ int& sum(){
     int& rNum = num;
     return rNum; //返回局部的引用类型变量
 }
->>>>>>> 26b63f24bd49b070aa2b7428f25cb6481737eb80
 
 //int& sum(){
 //    int num = 10;
