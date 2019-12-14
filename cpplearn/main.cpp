@@ -10,12 +10,8 @@ public:
     : grade(g), score(s)
     {
     }
-    int getGrade() {
-        return grade;
-    }
-    int getScore() {
-        return score;
-    }
+    int getGrade() {return grade;}
+    int getScore() {return score;}
 
     void print() const {
         cout << grade << "/" << score << endl;
