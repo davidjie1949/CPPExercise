@@ -4,38 +4,38 @@
 #include <vector>
 #include "calculators.h"
 
-class student{
-public:
-    student (int g = 0, int s = 0)
-    : grade(g), score(s)
-    {
-    }
-    int getGrade() {
-        return grade;
-    }
-    int getScore() {
-        return score;
-    }
+//class student{
+//public:
+//    student (int g = 0, int s = 0)
+//    : grade(g), score(s)
+//    {
+//    }
+//    int getGrade() {
+//        return grade;
+//    }
+//    int getScore() {
+//        return score;
+//    }
+//
+//    void print() const {
+//        cout << grade << "/" << score << endl;
+//    }
+//private:
+////    const int grade, score; //当遇上了const时候， grade = g; score = s; 就不能用了 因为 变量定义为 const, 需要改用 : grade（g), score(s)
+//    int grade, score;
+//
+//};
 
-    void print() const {
-        cout << grade << "/" << score << endl;
-    }
-private:
-//    const int grade, score; //当遇上了const时候， grade = g; score = s; 就不能用了 因为 变量定义为 const, 需要改用 : grade（g), score(s)
-    int grade, score;
-
-};
-
-int& sum(){
-    int num = 10;
-    int& rNum = num;
-    return rNum; //返回局部的引用类型变量
-}
-
-int test(){
-    int x = 1;
-    int y = 2;
-}
+//int& sum(){
+//    int num = 10;
+//    int& rNum = num;
+//    return rNum; //返回局部的引用类型变量
+//}
+//
+//int test(){
+//    int x = 1;
+//    int y = 2;
+//}
 
 //void hello( string name, int age )
 //{
@@ -143,6 +143,20 @@ int test(){
 //    B,
 //    C
 //};
+
+int AdditionFunction(const vector<int>& v){
+    int sum {0};
+    vector<int>::const_iterator i;
+    for (i = v.begin(); i != v.end(); i++)
+        sum += *i;
+    return sum;
+}
+
+void List(const vector<int>& score){
+    for (std::vector<int>::const_iterator ptr = score.begin(); ptr != score.end(); ptr++)
+        cout << *ptr << " ";
+}
+
 
 int main(){
 //    string characterName = "John";
@@ -381,7 +395,7 @@ int main(){
 //    cout << *ptr_score++ << endl;
 //}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//vector <int> score = {56,32,23};
+vector <int> score = {56,32,23};
 //cout << score[1] << endl;
 //cout << score.size() << endl;
 //
@@ -395,8 +409,13 @@ int main(){
 //score.assign(12,1);
 //
 //vector<int>::iterator ptr;
-//for (ptr = score.begin(); ptr < score.end(); ptr++)
+//for (ptr = score.begin(); ptr != score.end(); ptr++)
 //    cout << *ptr << " ";
+List(score);
+
+vector<int> v {1, 2, 3};
+cout << AdditionFunction(v) << "\n";
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //    int (*P1) = new int [5];
 //    for (int i = 0; i < 5; i++){
@@ -521,8 +540,9 @@ int main(){
 //cout << a << "/" << b <<endl;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int result = sum();
+//int result = sum();
+//
+//cout << "Result = " << result << endl;
 
-cout << "Result = " << result << endl;
     return 0;
 }
