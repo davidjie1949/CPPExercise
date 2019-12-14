@@ -4,6 +4,7 @@
 #include <vector>
 #include "calculators.h"
 
+<<<<<<< HEAD
 //class student{
 //public:
 //    student (int g = 0, int s = 0)
@@ -25,6 +26,31 @@
 //    int grade, score;
 //
 //};
+=======
+class student{
+public:
+    student (int g = 0, int s = 0)
+    : grade(g), score(s)
+    {
+    }
+    int getGrade() {return grade;}
+    int getScore() {return score;}
+
+    void print() const {
+        cout << grade << "/" << score << endl;
+    }
+private:
+//    const int grade, score; //当遇上了const时候， grade = g; score = s; 就不能用了 因为 变量定义为 const, 需要改用 : grade（g), score(s)
+    int grade, score;
+
+};
+
+int& sum(){
+    int num = 10;
+    int& rNum = num;
+    return rNum; //返回局部的引用类型变量
+}
+>>>>>>> 26b63f24bd49b070aa2b7428f25cb6481737eb80
 
 //int& sum(){
 //    int num = 10;
